@@ -8,7 +8,9 @@ from utils.permissions import AllowAnyPermission
 
 
 class MainPageView(generics.ListAPIView):
-    permission_classes = [AllowAnyPermission, ]
+    permission_classes = [
+        AllowAnyPermission,
+    ]
     versioning_class = BaseVersioning
     serializer_class = MainPageSerializer
     queryset = MainPageModel.objects.all()

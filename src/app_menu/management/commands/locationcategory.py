@@ -4,7 +4,7 @@ from app_menu.models import CategoryModel
 
 
 class Command(BaseCommand):
-    help = 'Initiate Category locations'
+    help = "Initiate Category locations"
 
     def handle(self, *args, **options):
         categories = CategoryModel.objects.all().order_by("location")

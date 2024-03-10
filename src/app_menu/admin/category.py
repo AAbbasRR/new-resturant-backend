@@ -5,13 +5,11 @@ from app_menu.models import CategoryModel
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
-        'name',
-        'location',
-        'is_active',
+        "name",
+        "location",
+        "is_active",
     )
-    search_fields = (
-        'name',
-    )
+    search_fields = ("name",)
 
     class Meta:
         model = CategoryModel

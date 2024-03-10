@@ -1,13 +1,10 @@
 from django.core.management.base import BaseCommand
 
-from app_menu.models import (
-    CategoryModel,
-    FoodModel
-)
+from app_menu.models import CategoryModel, FoodModel
 
 
 class Command(BaseCommand):
-    help = 'Initiate Food locations'
+    help = "Initiate Food locations"
 
     def handle(self, *args, **options):
         categories = CategoryModel.objects.all()

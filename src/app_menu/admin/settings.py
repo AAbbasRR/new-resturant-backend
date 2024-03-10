@@ -5,8 +5,8 @@ from app_menu.models import SettingsModel
 
 class SettingsAdmin(admin.ModelAdmin):
     list_display = (
-        'title',
-        'value',
+        "title",
+        "value",
     )
 
     def has_delete_permission(self, request, obj=None):

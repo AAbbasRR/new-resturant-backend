@@ -7,18 +7,33 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('app_menu', '0005_alter_mainpage_options_alter_settings_options_and_more'),
+        ("app_menu", "0005_alter_mainpage_options_alter_settings_options_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='settings',
-            name='image',
-            field=models.ImageField(null=True, upload_to=app_menu.models.settings.setting_image_directory_path, verbose_name='عکس'),
+            model_name="settings",
+            name="image",
+            field=models.ImageField(
+                null=True,
+                upload_to=app_menu.models.settings.setting_image_directory_path,
+                verbose_name="عکس",
+            ),
         ),
         migrations.AlterField(
-            model_name='settings',
-            name='title',
-            field=models.CharField(choices=[('PHONE', 'شماره تماس'), ('ADDRESS', 'آدرس'), ('INSTAGRAM', 'آیدی اینستاگرام'), ('StartTime', 'زمان شروع به کار'), ('EndTime', 'زمان اتمام کار'), ('MenuImage', 'Menu Image')], max_length=10, verbose_name='عنوان'),
+            model_name="settings",
+            name="title",
+            field=models.CharField(
+                choices=[
+                    ("PHONE", "شماره تماس"),
+                    ("ADDRESS", "آدرس"),
+                    ("INSTAGRAM", "آیدی اینستاگرام"),
+                    ("StartTime", "زمان شروع به کار"),
+                    ("EndTime", "زمان اتمام کار"),
+                    ("MenuImage", "Menu Image"),
+                ],
+                max_length=10,
+                verbose_name="عنوان",
+            ),
         ),
     ]

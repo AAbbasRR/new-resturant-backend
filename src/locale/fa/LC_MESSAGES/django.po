@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-18 12:31+0330\n"
+"POT-Creation-Date: 2024-03-10 17:32+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,50 +26,6 @@ msgstr "اپلیکیشن منو"
 msgid "App Menus"
 msgstr "اپلیکیشن منو"
 
-#: app_menu/models/birthday.py:10 app_menu/models/birthday.py:69
-msgid "Birthday"
-msgstr "آیتم تولد"
-
-#: app_menu/models/birthday.py:11
-msgid "Birthdays"
-msgstr "آیتم های تولد"
-
-#: app_menu/models/birthday.py:15 app_menu/models/category.py:18
-#: app_menu/models/food.py:28
-msgid "Name"
-msgstr "نام"
-
-#: app_menu/models/birthday.py:19 app_menu/models/category.py:26
-#: app_menu/models/food.py:43
-msgid "Is Active"
-msgstr "وضعیت فعال بودن"
-
-#: app_menu/models/birthday.py:24 app_menu/models/food.py:48
-msgid "Price"
-msgstr "قیمت"
-
-#: app_menu/models/birthday.py:29 app_menu/models/category.py:35
-msgid "Description"
-msgstr "توضیحات"
-
-#: app_menu/models/birthday.py:33 app_menu/models/category.py:30
-#: app_menu/models/food.py:52
-msgid "Location"
-msgstr "جایگاه"
-
-#: app_menu/models/birthday.py:62
-msgid "Birthday Image"
-msgstr "عکس اسلایدر"
-
-#: app_menu/models/birthday.py:63
-msgid "Birthday Images"
-msgstr "عکس های اسلایدر"
-
-#: app_menu/models/birthday.py:75 app_menu/models/food.py:39
-#: app_menu/models/main_page.py:19 app_menu/models/settings.py:46
-msgid "Image"
-msgstr "عکس"
-
 #: app_menu/models/category.py:13 app_menu/models/food.py:24
 msgid "Category"
 msgstr "دسته"
@@ -78,11 +34,28 @@ msgstr "دسته"
 msgid "Categories"
 msgstr "دسته ها"
 
-#: app_menu/models/category.py:22
+#: app_menu/models/category.py:16 app_menu/models/food.py:26
+#: app_menu/models/food.py:102
+msgid "Name"
+msgstr "نام"
+
+#: app_menu/models/category.py:18
 msgid "Icon"
 msgstr "آیکون"
 
-#: app_menu/models/food.py:16
+#: app_menu/models/category.py:20 app_menu/models/food.py:34
+msgid "Is Active"
+msgstr "وضعیت فعال بودن"
+
+#: app_menu/models/category.py:21 app_menu/models/food.py:38
+msgid "Location"
+msgstr "جایگاه"
+
+#: app_menu/models/category.py:22
+msgid "Description"
+msgstr "توضیحات"
+
+#: app_menu/models/food.py:16 app_menu/models/food.py:100
 msgid "Food"
 msgstr "غذا"
 
@@ -90,27 +63,48 @@ msgstr "غذا"
 msgid "Foods"
 msgstr "غذاها"
 
-#: app_menu/models/food.py:33
+#: app_menu/models/food.py:27
 msgid "Material"
 msgstr "رسپی"
+
+#: app_menu/models/food.py:32 app_menu/models/main_page.py:18
+#: app_menu/models/settings.py:39
+msgid "Image"
+msgstr "عکس"
+
+#: app_menu/models/food.py:36 app_menu/models/food.py:104
+msgid "Price"
+msgstr "قیمت"
+
+#: app_menu/models/food.py:93
+#, fuzzy
+#| msgid "Food"
+msgid "Food Item"
+msgstr "آیتم(سایز، نوع متفاوت)"
+
+#: app_menu/models/food.py:94
+#, fuzzy
+#| msgid "Foods"
+msgid "Food Items"
+msgstr "آیتم ها(سایز، نوع متفاوت)"
 
 #: app_menu/models/main_page.py:14 app_menu/models/main_page.py:15
 msgid "Main Page"
 msgstr "صفحه اصلی"
 
-#: app_menu/models/settings.py:28
+#: app_menu/models/settings.py:26
 msgid "Setting"
 msgstr "تنظیمات رستوران"
 
-#: app_menu/models/settings.py:29
+#: app_menu/models/settings.py:27
 msgid "Settings"
 msgstr "تنظیمات رستوران"
 
-#: app_menu/models/settings.py:34
+#: app_menu/models/settings.py:30
 msgid "Title"
 msgstr "عنوان"
 
-#: app_menu/models/settings.py:40
+#: app_menu/models/settings.py:33
 msgid "Value"
 msgstr "مقدار"
 
@@ -140,10 +134,22 @@ msgstr "زمان اتمام کار"
 msgid "Menu Image"
 msgstr "عکس"
 
-#: utils/url_handlers.py:11
+#: utils/url_handlers.py:6
 msgid "URL Not Found."
 msgstr "پیدا نشد"
 
-#: utils/url_handlers.py:17
+#: utils/url_handlers.py:10
 msgid "Server Error."
 msgstr "مشکل از سمت سرور"
+
+#~ msgid "Birthday"
+#~ msgstr "آیتم تولد"
+
+#~ msgid "Birthdays"
+#~ msgstr "آیتم های تولد"
+
+#~ msgid "Birthday Image"
+#~ msgstr "عکس اسلایدر"
+
+#~ msgid "Birthday Images"
+#~ msgstr "عکس های اسلایدر"

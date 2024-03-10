@@ -10,71 +10,87 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('app_menu', '0001_initial'),
+        ("app_menu", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='category',
-            options={'verbose_name': 'دسته', 'verbose_name_plural': 'دسته ها'},
+            name="category",
+            options={"verbose_name": "دسته", "verbose_name_plural": "دسته ها"},
         ),
         migrations.AlterModelOptions(
-            name='food',
-            options={'verbose_name': 'غذا', 'verbose_name_plural': 'غذاها'},
+            name="food",
+            options={"verbose_name": "غذا", "verbose_name_plural": "غذاها"},
         ),
         migrations.AddField(
-            model_name='category',
-            name='location',
-            field=models.PositiveIntegerField(default=1, verbose_name='جایگاه'),
+            model_name="category",
+            name="location",
+            field=models.PositiveIntegerField(default=1, verbose_name="جایگاه"),
         ),
         migrations.AddField(
-            model_name='food',
-            name='location',
-            field=models.PositiveIntegerField(default=1, verbose_name='جایگاه'),
+            model_name="food",
+            name="location",
+            field=models.PositiveIntegerField(default=1, verbose_name="جایگاه"),
         ),
         migrations.AlterField(
-            model_name='category',
-            name='icon',
-            field=models.ImageField(upload_to=app_menu.models.category.category_icon_directory_path, verbose_name='آیکون'),
+            model_name="category",
+            name="icon",
+            field=models.ImageField(
+                upload_to=app_menu.models.category.category_icon_directory_path,
+                verbose_name="آیکون",
+            ),
         ),
         migrations.AlterField(
-            model_name='category',
-            name='is_active',
-            field=models.BooleanField(default=True, verbose_name='وضعیت فعال بودن'),
+            model_name="category",
+            name="is_active",
+            field=models.BooleanField(default=True, verbose_name="وضعیت فعال بودن"),
         ),
         migrations.AlterField(
-            model_name='category',
-            name='name',
-            field=models.CharField(max_length=100, verbose_name='نام'),
+            model_name="category",
+            name="name",
+            field=models.CharField(max_length=100, verbose_name="نام"),
         ),
         migrations.AlterField(
-            model_name='food',
-            name='category',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='category_foods', to='app_menu.category', verbose_name='دسته'),
+            model_name="food",
+            name="category",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="category_foods",
+                to="app_menu.category",
+                verbose_name="دسته",
+            ),
         ),
         migrations.AlterField(
-            model_name='food',
-            name='image',
-            field=models.ImageField(upload_to=app_menu.models.food.food_image_directory_path, verbose_name='عکس'),
+            model_name="food",
+            name="image",
+            field=models.ImageField(
+                upload_to=app_menu.models.food.food_image_directory_path,
+                verbose_name="عکس",
+            ),
         ),
         migrations.AlterField(
-            model_name='food',
-            name='is_active',
-            field=models.BooleanField(default=True, verbose_name='وضعیت فعال بودن'),
+            model_name="food",
+            name="is_active",
+            field=models.BooleanField(default=True, verbose_name="وضعیت فعال بودن"),
         ),
         migrations.AlterField(
-            model_name='food',
-            name='material',
-            field=models.TextField(verbose_name='رسپی'),
+            model_name="food",
+            name="material",
+            field=models.TextField(verbose_name="رسپی"),
         ),
         migrations.AlterField(
-            model_name='food',
-            name='name',
-            field=models.CharField(max_length=100, verbose_name='نام'),
+            model_name="food",
+            name="name",
+            field=models.CharField(max_length=100, verbose_name="نام"),
         ),
         migrations.AlterField(
-            model_name='food',
-            name='price',
-            field=models.IntegerField(default=0, validators=[django.core.validators.MinValueValidator(0)], verbose_name='قیمت'),
+            model_name="food",
+            name="price",
+            field=models.IntegerField(
+                default=0,
+                validators=[django.core.validators.MinValueValidator(0)],
+                verbose_name="قیمت",
+            ),
         ),
     ]

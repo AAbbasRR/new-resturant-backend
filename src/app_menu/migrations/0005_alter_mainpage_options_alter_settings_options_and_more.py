@@ -7,31 +7,47 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('app_menu', '0004_mainpage_settings'),
+        ("app_menu", "0004_mainpage_settings"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='mainpage',
-            options={'verbose_name': 'صفحه اصلی', 'verbose_name_plural': 'صفحه اصلی'},
+            name="mainpage",
+            options={"verbose_name": "صفحه اصلی", "verbose_name_plural": "صفحه اصلی"},
         ),
         migrations.AlterModelOptions(
-            name='settings',
-            options={'verbose_name': 'تنظیمات رستوران', 'verbose_name_plural': 'تنظیمات رستوران'},
+            name="settings",
+            options={
+                "verbose_name": "تنظیمات رستوران",
+                "verbose_name_plural": "تنظیمات رستوران",
+            },
         ),
         migrations.AlterField(
-            model_name='food',
-            name='image',
-            field=models.FileField(upload_to=app_menu.models.food.food_image_directory_path, verbose_name='عکس'),
+            model_name="food",
+            name="image",
+            field=models.FileField(
+                upload_to=app_menu.models.food.food_image_directory_path,
+                verbose_name="عکس",
+            ),
         ),
         migrations.AlterField(
-            model_name='settings',
-            name='title',
-            field=models.CharField(choices=[('PHONE', 'شماره تماس'), ('ADDRESS', 'آدرس'), ('INSTAGRAM', 'آیدی اینستاگرام'), ('StartTime', 'زمان شروع به کار'), ('EndTime', 'زمان اتمام کار')], max_length=10, verbose_name='عنوان'),
+            model_name="settings",
+            name="title",
+            field=models.CharField(
+                choices=[
+                    ("PHONE", "شماره تماس"),
+                    ("ADDRESS", "آدرس"),
+                    ("INSTAGRAM", "آیدی اینستاگرام"),
+                    ("StartTime", "زمان شروع به کار"),
+                    ("EndTime", "زمان اتمام کار"),
+                ],
+                max_length=10,
+                verbose_name="عنوان",
+            ),
         ),
         migrations.AlterField(
-            model_name='settings',
-            name='value',
-            field=models.CharField(max_length=100, verbose_name='مقدار'),
+            model_name="settings",
+            name="value",
+            field=models.CharField(max_length=100, verbose_name="مقدار"),
         ),
     ]

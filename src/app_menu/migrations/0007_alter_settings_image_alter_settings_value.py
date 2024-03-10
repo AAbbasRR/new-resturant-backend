@@ -7,18 +7,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('app_menu', '0006_settings_image_alter_settings_title'),
+        ("app_menu", "0006_settings_image_alter_settings_title"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='settings',
-            name='image',
-            field=models.ImageField(blank=True, null=True, upload_to=app_menu.models.settings.setting_image_directory_path, verbose_name='عکس'),
+            model_name="settings",
+            name="image",
+            field=models.ImageField(
+                blank=True,
+                null=True,
+                upload_to=app_menu.models.settings.setting_image_directory_path,
+                verbose_name="عکس",
+            ),
         ),
         migrations.AlterField(
-            model_name='settings',
-            name='value',
-            field=models.CharField(blank=True, max_length=100, null=True, verbose_name='مقدار'),
+            model_name="settings",
+            name="value",
+            field=models.CharField(
+                blank=True, max_length=100, null=True, verbose_name="مقدار"
+            ),
         ),
     ]

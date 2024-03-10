@@ -6,17 +6,16 @@ from config.settings import DEBUG
 
 
 def main_page_image_directory_path(instance, filename):
-    return 'main_images/{0}'.format(filename)
+    return "main_images/{0}".format(filename)
 
 
 class MainPage(models.Model):
     class Meta:
-        verbose_name = _('Main Page')
-        verbose_name_plural = _('Main Page')
+        verbose_name = _("Main Page")
+        verbose_name_plural = _("Main Page")
 
     image = models.ImageField(
-        upload_to=main_page_image_directory_path,
-        verbose_name=_('Image')
+        upload_to=main_page_image_directory_path, verbose_name=_("Image")
     )
 
     def __str__(self):
@@ -44,6 +43,12 @@ class MainPage(models.Model):
         else:
             host = request.get_host()
             protocol = request.build_absolute_uri().split(host)[0]
-            protocol = protocol if DEBUG else protocol.replace("http", "https") if protocol.split(":")[0] == "http" else protocol
+            protocol = (
+                protocol
+                if DEBUG
+                else protocol.replace("http", "https")
+                if protocol.split(":")[0] == "http"
+                else protocol
+            )
             website_url = protocol + host
             return website_url + self.image.url
