@@ -44,17 +44,18 @@ class Food(models.Model):
         self, force_insert=False, force_update=False, using=None, update_fields=None
     ):
         if self.pk is not None:
-            onother_location = (
-                Food.objects.filter(category=self.category, location=self.location)
-                .exclude(pk=self.pk)
-                .first()
-            )
-            if onother_location is not None:
-                old_obj = Food.objects.filter(pk=self.pk).first()
-                new_obj = super().save(force_insert, force_update, using, update_fields)
-                onother_location.location = old_obj.location
-                onother_location.save()
-                return new_obj
+            pass
+            # onother_location = (
+            #     Food.objects.filter(category=self.category, location=self.location)
+            #     .exclude(pk=self.pk)
+            #     .first()
+            # )
+            # if onother_location is not None:
+            #     old_obj = Food.objects.filter(pk=self.pk).first()
+            #     new_obj = super().save(force_insert, force_update, using, update_fields)
+            #     onother_location.location = old_obj.location
+            #     onother_location.save()
+            #     return new_obj
         else:
             onother_location = Food.objects.filter(
                 category=self.category, location=self.location
