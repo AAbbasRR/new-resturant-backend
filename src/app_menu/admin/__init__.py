@@ -1,1 +1,1 @@
-from . import category, food, main_page, settings
+from . import category, food, settings

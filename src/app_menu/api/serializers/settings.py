@@ -4,15 +4,20 @@ from app_menu.models import SettingsModel
 
 
 class MenuInfoSerializer(serializers.ModelSerializer):
-    image = serializers.SerializerMethodField("get_image")
-
     class Meta:
         model = SettingsModel
-        fields = ("id", "title", "value", "image")
+        fields = (
+            "id",
+            "title",
+            "address",
+            "favicon",
+            "call_number",
+            "instagram_id",
+            "open_time",
+            "close_time",
+            "banner",
+        )
 
     def __init__(self, *args, **kwargs):
         super(MenuInfoSerializer, self).__init__(*args, **kwargs)
         self.request = self.context.get("request")
-
-    def get_image(self, obj):
-        return obj.get_image_url(self.request)

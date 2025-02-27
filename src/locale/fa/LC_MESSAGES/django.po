@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-10 17:32+0330\n"
+"POT-Creation-Date: 2025-02-27 23:29+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,7 @@ msgid "Categories"
 msgstr "دسته ها"
 
 #: app_menu/models/category.py:16 app_menu/models/food.py:26
-#: app_menu/models/food.py:102
+#: app_menu/models/food.py:71
 msgid "Name"
 msgstr "نام"
 
@@ -55,7 +55,7 @@ msgstr "جایگاه"
 msgid "Description"
 msgstr "توضیحات"
 
-#: app_menu/models/food.py:16 app_menu/models/food.py:100
+#: app_menu/models/food.py:16 app_menu/models/food.py:69
 msgid "Food"
 msgstr "غذا"
 
@@ -67,72 +67,61 @@ msgstr "غذاها"
 msgid "Material"
 msgstr "رسپی"
 
-#: app_menu/models/food.py:32 app_menu/models/main_page.py:18
-#: app_menu/models/settings.py:39
+#: app_menu/models/food.py:32
 msgid "Image"
 msgstr "عکس"
 
-#: app_menu/models/food.py:36 app_menu/models/food.py:104
+#: app_menu/models/food.py:36 app_menu/models/food.py:73
 msgid "Price"
 msgstr "قیمت"
 
-#: app_menu/models/food.py:93
-#, fuzzy
-#| msgid "Food"
+#: app_menu/models/food.py:62
 msgid "Food Item"
 msgstr "آیتم(سایز، نوع متفاوت)"
 
-#: app_menu/models/food.py:94
-#, fuzzy
-#| msgid "Foods"
+#: app_menu/models/food.py:63
 msgid "Food Items"
 msgstr "آیتم ها(سایز، نوع متفاوت)"
 
-#: app_menu/models/main_page.py:14 app_menu/models/main_page.py:15
-msgid "Main Page"
-msgstr "صفحه اصلی"
-
-#: app_menu/models/settings.py:26
+#: app_menu/models/settings.py:22
 msgid "Setting"
 msgstr "تنظیمات رستوران"
 
-#: app_menu/models/settings.py:27
+#: app_menu/models/settings.py:23
 msgid "Settings"
 msgstr "تنظیمات رستوران"
 
-#: app_menu/models/settings.py:30
+#: app_menu/models/settings.py:26
 msgid "Title"
 msgstr "عنوان"
 
-#: app_menu/models/settings.py:33
-msgid "Value"
-msgstr "مقدار"
-
-#: utils/data_list.py:4
-msgid "Phone Number"
-msgstr "شماره تماس"
-
-#: utils/data_list.py:5
+#: app_menu/models/settings.py:29
 msgid "Address"
 msgstr "آدرس"
 
-#: utils/data_list.py:6
-msgid "Instagram"
+#: app_menu/models/settings.py:32
+msgid "Favicon"
+msgstr "آیکون"
+
+#: app_menu/models/settings.py:35
+msgid "Call Number"
+msgstr "شماره تماس"
+
+#: app_menu/models/settings.py:37
+msgid "Open Time"
+msgstr "زمان شروع کار"
+
+#: app_menu/models/settings.py:38
+msgid "Close Time"
+msgstr "زمان پایان کار"
+
+#: app_menu/models/settings.py:39
+msgid "Instagram ID"
 msgstr "آیدی اینستاگرام"
 
-#: utils/data_list.py:7
-msgid "Start Time"
-msgstr "زمان شروع به کار"
-
-#: utils/data_list.py:8
-msgid "End Time"
-msgstr "زمان اتمام کار"
-
-#: utils/data_list.py:9
-#, fuzzy
-#| msgid "Image"
-msgid "Menu Image"
-msgstr "عکس"
+#: app_menu/models/settings.py:44
+msgid "Banner"
+msgstr "بنر"
 
 #: utils/url_handlers.py:6
 msgid "URL Not Found."
@@ -141,15 +130,3 @@ msgstr "پیدا نشد"
 #: utils/url_handlers.py:10
 msgid "Server Error."
 msgstr "مشکل از سمت سرور"
-
-#~ msgid "Birthday"
-#~ msgstr "آیتم تولد"
-
-#~ msgid "Birthdays"
-#~ msgstr "آیتم های تولد"
-
-#~ msgid "Birthday Image"
-#~ msgstr "عکس اسلایدر"
-
-#~ msgid "Birthday Images"
-#~ msgstr "عکس های اسلایدر"

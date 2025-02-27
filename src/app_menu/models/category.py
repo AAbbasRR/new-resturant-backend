@@ -27,37 +27,9 @@ class Category(models.Model):
     def save(
         self, force_insert=False, force_update=False, using=None, update_fields=None
     ):
-        if self.pk is not None:
-            onother_location = (
-                Category.objects.filter(location=self.location)
-                .exclude(pk=self.pk)
-                .first()
-            )
-            if onother_location is not None:
-                old_obj = Category.objects.filter(pk=self.pk).first()
-                new_obj = super().save(force_insert, force_update, using, update_fields)
-                onother_location.location = old_obj.location
-                onother_location.save()
-                return new_obj
-        else:
+        if self.pk is None:
             onother_location = Category.objects.filter(location=self.location).first()
             if onother_location is not None:
                 last_obj = Category.objects.order_by("location").last()
                 self.location = last_obj.location + 1
         return super().save(force_insert, force_update, using, update_fields)
-
-    def get_icon_url(self, request):
-        if self.icon is None or self.icon == "":
-            return None
-        else:
-            host = request.get_host()
-            protocol = request.build_absolute_uri().split(host)[0]
-            protocol = (
-                protocol
-                if DEBUG
-                else protocol.replace("http", "https")
-                if protocol.split(":")[0] == "http"
-                else protocol
-            )
-            website_url = protocol + host
-            return website_url + self.icon.url

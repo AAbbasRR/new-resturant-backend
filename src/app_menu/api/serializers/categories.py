@@ -10,21 +10,15 @@ class FoodItemSerializer(serializers.ModelSerializer):
 
 
 class FoodSerializer(serializers.ModelSerializer):
-    image_link = serializers.SerializerMethodField(
-        "get_image_link",
-    )
     items = serializers.SerializerMethodField("get_items")
 
     class Meta:
         model = FoodModel
-        fields = ("id", "name", "material", "price", "image_link", "items")
+        fields = ("id", "name", "material", "image", "price", "items")
 
     def __init__(self, *args, **kwargs):
         super(FoodSerializer, self).__init__(*args, **kwargs)
         self.request = self.context.get("request")
-
-    def get_image_link(self, obj):
-        return obj.get_image_url(self.request)
 
     def get_items(self, obj):
         return FoodItemSerializer(obj.food_items.all(), many=True, read_only=True).data
@@ -32,16 +26,15 @@ class FoodSerializer(serializers.ModelSerializer):
 
 class ListCategoriesSerializer(serializers.ModelSerializer):
     category_foods = serializers.SerializerMethodField("get_category_foods")
-    icon_link = serializers.SerializerMethodField("get_icon_link")
 
     class Meta:
         model = CategoryModel
         fields = (
             "id",
             "name",
+            "icon",
             "description",
             "category_foods",
-            "icon_link",
         )
 
     def __init__(self, *args, **kwargs):
@@ -55,6 +48,3 @@ class ListCategoriesSerializer(serializers.ModelSerializer):
             read_only=True,
             context=self.context,
         ).data
-
-    def get_icon_link(self, obj):
-        return obj.get_icon_url(self.request)
