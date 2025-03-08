@@ -24,11 +24,9 @@ class BranchesAdmin(admin.ModelAdmin):
 class SettingsAdmin(admin.ModelAdmin):
     list_display = (
         "title",
-        "favicon",
         "instagram_id",
         "open_time",
         "close_time",
-        "banner",
     )
 
     def has_delete_permission(self, request, obj=None):

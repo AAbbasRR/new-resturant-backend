@@ -37,6 +37,7 @@ class MenuInfoSerializer(serializers.ModelSerializer):
         fields = (
             "id",
             "title",
+            "short_description",
             "favicon",
             "instagram_id",
             "open_time",
