@@ -47,7 +47,7 @@ class Settings(models.Model):
 
     title = models.CharField(max_length=100, verbose_name=_("Title"))
     short_description = models.CharField(
-        max_length=100, verbose_name=_("Short Description")
+        max_length=100, null=True, blank=True, verbose_name=_("Short Description")
     )
     favicon = models.ImageField(
         null=True,
