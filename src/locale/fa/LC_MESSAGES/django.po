@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 23:29+0330\n"
+"POT-Creation-Date: 2025-03-08 13:13+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,43 +83,59 @@ msgstr "آیتم(سایز، نوع متفاوت)"
 msgid "Food Items"
 msgstr "آیتم ها(سایز، نوع متفاوت)"
 
-#: app_menu/models/settings.py:22
-msgid "Setting"
-msgstr "تنظیمات رستوران"
+#: app_menu/models/settings.py:22 app_menu/models/settings.py:38
+msgid "Branch"
+msgstr "شعبه"
 
 #: app_menu/models/settings.py:23
-msgid "Settings"
-msgstr "تنظیمات رستوران"
+msgid "Branches"
+msgstr "شعبات"
 
-#: app_menu/models/settings.py:26
+#: app_menu/models/settings.py:25 app_menu/models/settings.py:50
 msgid "Title"
 msgstr "عنوان"
 
-#: app_menu/models/settings.py:29
+#: app_menu/models/settings.py:26
 msgid "Address"
 msgstr "آدرس"
 
-#: app_menu/models/settings.py:32
-msgid "Favicon"
-msgstr "آیکون"
+#: app_menu/models/settings.py:31
+msgid "Branch Call Number"
+msgstr "شماره تماس شعبه"
 
-#: app_menu/models/settings.py:35
+#: app_menu/models/settings.py:32
+msgid "Branch Call Numbers"
+msgstr "شماره تماس شعبات"
+
+#: app_menu/models/settings.py:41
 msgid "Call Number"
 msgstr "شماره تماس"
 
-#: app_menu/models/settings.py:37
+#: app_menu/models/settings.py:47
+msgid "Setting"
+msgstr "تنظیمات رستوران"
+
+#: app_menu/models/settings.py:48
+msgid "Settings"
+msgstr "تنظیمات رستوران"
+
+#: app_menu/models/settings.py:55
+msgid "Favicon"
+msgstr "آیکون"
+
+#: app_menu/models/settings.py:57
 msgid "Open Time"
 msgstr "زمان شروع کار"
 
-#: app_menu/models/settings.py:38
+#: app_menu/models/settings.py:58
 msgid "Close Time"
 msgstr "زمان پایان کار"
 
-#: app_menu/models/settings.py:39
+#: app_menu/models/settings.py:60
 msgid "Instagram ID"
 msgstr "آیدی اینستاگرام"
 
-#: app_menu/models/settings.py:44
+#: app_menu/models/settings.py:66
 msgid "Banner"
 msgstr "بنر"
 

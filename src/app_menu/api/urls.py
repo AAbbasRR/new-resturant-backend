@@ -10,4 +10,5 @@ urlpatterns = [
     path("food/list/", ListFoodsView.as_view(), name="user_list_foods"),
     # settings
     path("info/", MenuInfoView.as_view(), name="user_list_settings"),
+    path("branches/", ListBranchesView.as_view(), name="user_list_branches"),
 ]

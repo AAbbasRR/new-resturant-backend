@@ -1,3 +1,3 @@
 from .categories import ListCategoriesView
 from .foods import ListFoodsView
-from .settings import MenuInfoView
+from .settings import MenuInfoView, ListBranchesView
